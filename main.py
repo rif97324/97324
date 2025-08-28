@@ -6,7 +6,7 @@ from util import load_token, ensure_api_key
 from paket_xut import get_package_xut
 from paket_reguler import get_package_reguler
 from paket_flex import get_package_flex
-from paket_45gb import get_package_45gb
+from paket_bundling import get_package_bundling
 from my_package import fetch_my_packages
 
 user_data = {
@@ -63,8 +63,8 @@ def main():
                 
                 show_package_menu(api_key, user_data["tokens"], packages)
             elif choice == "6":
-                # 45gb
-                packages = get_package_45gb(api_key, user_data["tokens"])
+                # Bundling
+                packages = get_package_bundling(api_key, user_data["tokens"])
                 
                 show_package_menu(api_key, user_data["tokens"], packages)
             elif choice == "99":
