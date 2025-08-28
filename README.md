@@ -1,4 +1,4 @@
-# Dor YTTA by Flyxt
+# YTTA
 
 # How to get API Key
 Chat telegram bot [@fykxt_bot](https://t.me/fykxt_bot) with message `/viewkey`. Copy the API key.
@@ -18,11 +18,11 @@ pkg install python
 ```
 4. Clone this repo
 ```
-git clone https://github.com/flyxt/myxl-cli
+git clone https://github.com/rif97324/97324
 ```
 5. Open the folder
 ```
-cd myxl-cli
+cd rif97324
 ```
 6. Install dependencies
 ```
