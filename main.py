@@ -49,6 +49,11 @@ def main():
                 packages = get_package_xut(api_key, user_data["tokens"])
                 
                 show_package_menu(api_key, user_data["tokens"], packages)
+                elif choice == "4":
+                # 1 GB 
+                packages = get_package_1gb(api_key, user_data["tokens"])
+                
+                show_package_menu(api_key, user_data["tokens"], packages)
             elif choice == "99":
                 print("Exiting the application.")
                 sys.exit(0)
