@@ -12,7 +12,7 @@ def get_package_reguler(api_key: str, tokens: dict):
     for variant in package_variants:
         if variant["name"] == "For Reguler":
             for option in variant["package_options"]:
-                if True:
+                if False:
                     friendly_name = option["name"]
                     
                     if friendly_name.lower() == "main":
