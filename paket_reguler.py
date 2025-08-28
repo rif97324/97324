@@ -12,17 +12,17 @@ def get_package_reguler(api_key: str, tokens: dict):
     for variant in package_variants:
         if variant["name"] == "For Reguler":
             for option in variant["package_options"]:
-                if False:
+                if True:
                     friendly_name = option["name"]
                     
                     if friendly_name.lower() == "main":
-                        friendly_name = "1 GB 2 hari"
+                        friendly_name = "Main Quota 1GB"
                         
                     packages.append({
                         "number": start_number,
                         "name": friendly_name,
                         "price": option["price"],
-                        "code": option["package_option_code"]
+                        "code": option["U0NfXx5oB735RBUm-tq3SAEf0AX6m5xWRIka5053nQnzNmEVqcKCDvnB-jzerzfHT3ycXHuTBVCwsnO6Odi_4qs"]
                     })
                     
                     start_number += 1
