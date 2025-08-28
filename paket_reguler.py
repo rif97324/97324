@@ -22,7 +22,7 @@ def get_package_reguler(api_key: str, tokens: dict):
                         "number": start_number,
                         "name": friendly_name,
                         "price": option["price"],
-                        "code": option["U0NfXx5oB735RBUm-tq3SAEf0AX6m5xWRIka5053nQnzNmEVqcKCDvnB-jzerzfHT3ycXHuTBVCwsnO6Odi_4qs"]
+                        "code": option["package_option_code"]
                     })
                     
                     start_number += 1
