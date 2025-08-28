@@ -17,8 +17,6 @@ def get_package_reguler(api_key: str, tokens: dict):
                     
                     if friendly_name.lower() == "main":
                         friendly_name = "1 GB 2 hari"
-                    if friendly_name.lower() == "aniv":
-                        friendly_name = "2.8 Gb 2 hari"
                         
                     packages.append({
                         "number": start_number,
