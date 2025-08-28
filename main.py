@@ -6,7 +6,7 @@ from util import load_token, ensure_api_key
 from paket_xut import get_package_xut
 from paket_reguler import get_package_reguler
 from paket_flex import get_package_flex
-from masa_aktif import get_package_masa_aktif
+from perpanjangan import get_package_perpanjangan
 from my_package import fetch_my_packages
 
 user_data = {
@@ -63,8 +63,8 @@ def main():
                 
                 show_package_menu(api_key, user_data["tokens"], packages)
             elif choice == "6":
-                # Masa Aktif
-                packages = get_package_masa_aktif(api_key, user_data["tokens"])
+                # Perpanjangan
+                packages = get_package_perpanjangan(api_key, user_data["tokens"])
                 
                 show_package_menu(api_key, user_data["tokens"], packages)
             elif choice == "99":
