@@ -50,7 +50,7 @@ def main():
                 packages = get_package_xut(api_key, user_data["tokens"])
                 
                 show_package_menu(api_key, user_data["tokens"], packages)
-                elif choice == "4":
+            elif choice == "4":
                 # Reguler
                 packages = get_package_reguler(api_key, user_data["tokens"])
                 
