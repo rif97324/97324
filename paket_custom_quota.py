@@ -1,13 +1,13 @@
 import json
-from api_request import send_api_request, get_family
+from api_request import send_api_request, get_quota
 from ui import clear_screen, show_package_details
 
 def get_packages_by_quota(api_key: str, tokens: dict, quota_code: str):
     packages = []
     
-    data = get_family(api_key, tokens, family_code)
+    data = get_quota(api_key, tokens, quota_code)
     if not data:
-        print("Failed to load family data.")
+        print("Failed to load quota data.")
         return None
     
     
@@ -18,8 +18,8 @@ def get_packages_by_quota(api_key: str, tokens: dict, quota_code: str):
         print("Paket Tersedia")
         print("--------------------------")
         
-        family_name = data['package_family']["name"]
-        print(f"Family Name: {family_name}")
+        quota_name = data['package_quota']["name"]
+        print(f"QuotA Name: {quota_name}")
         
         package_variants = data["package_variants"]
         
