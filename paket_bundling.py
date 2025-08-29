@@ -1,12 +1,12 @@
 import json
-from api_request import send_api_request, get_family
+from api_request import send_api_request, get_option
 
-PACKAGE_FAMILY_CODE = "6bcc96f4-f196-4e8f-969f-e45a121d21bd"
+PACKAGE_OPTION_CODE = "U0NfX5WmsK6qiDkee_-aCL5oHT_J8VpRXtruMdAPKbyeKlM7bccIVJqHJanSnbp7tfQ-wvTjfp5Py8ayz1HSMw0"
 
 def get_package_bundling(api_key: str, tokens: dict):
     packages = []
     
-    data = get_family(api_key, tokens, PACKAGE_FAMILY_CODE)
+    data = get_option(api_key, tokens, PACKAGE_OPTION_CODE)
     package_variants = data["package_variants"]
     start_number = 1
     for variant in package_variants:
