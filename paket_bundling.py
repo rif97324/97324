@@ -1,8 +1,7 @@
 import json
 from api_request import send_api_request, get_family
 
-PACKAGE_FAMILY_CODE = "1b42d4f6-a76e-4986-aa5c-e2979da952f4"
-
+PACKAGE_FAMILY_CODE = "6bcc96f4-f196-4e8f-969f-e45a121d21bd"
 def get_package_bundling(api_key: str, tokens: dict):
     packages = []
     
