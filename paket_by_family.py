@@ -2,7 +2,7 @@ import json
 from api_request import send_api_request, get_family
 from ui import clear_screen, show_package_details
 
-def get_packages_by_family(api_key: str, tokens: dict, family_code: str):
+def get_package_by_family(api_key: str, tokens: dict, family_code: str):
     packages = []
     
     data = get_family(api_key, tokens, family_code)
