@@ -6,7 +6,7 @@ from util import load_token, ensure_api_key
 from paket_xut import get_package_xut
 from paket_reguler import get_package_reguler
 from paket_flex import get_package_flex
-from paket_by_family import get_package_by_family
+from paket_custom_family import get_packages_by_family
 from my_package import fetch_my_packages
 
 user_data = {
@@ -63,10 +63,10 @@ def main():
                 
                 show_package_menu(api_key, user_data["tokens"], packages)
             elif choice == "6":
-                # Family
-                packages = get_package_by_family(api_key, user_data["tokens"])
-                
-                show_package_menu(api_key, user_data["tokens"], packages)
+                family_code = input("Enter family code (or '99' to cancel): ")
+                if family_code == "99":
+                    continue
+                get_packages_by_family(api_key, user_data["tokens"], family_code)
             elif choice == "99":
                 print("Exiting the application.")
                 sys.exit(0)
