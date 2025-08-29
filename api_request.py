@@ -320,6 +320,33 @@ def get_package(api_key: str, tokens: dict, package_option_code: str) -> dict:
         
     return res["data"]
 
+def get_package(api_key: str, tokens: dict, package_option_code: str) -> dict:
+    path = "api/v8/xl-stores/options/detail"
+    
+    raw_payload = {
+        "is_transaction_routine": False,
+        "migration_type": "",
+        "package_quota_code": "",
+        "quota_role_hub": "",
+        "is_autobuy": False,
+        "is_enterprise": False,
+        "is_shareable": False,
+        "is_migration": False,
+        "lang": "en",
+        "package_option_code": package_option_code,
+        "is_upsell_pdp": False,
+        "package_variant_code": ""
+    }
+    
+    print("Fetching package...")
+    res = send_api_request(api_key, path, raw_payload, tokens["id_token"], "POST")
+    
+    if "data" not in res:
+        print("Error getting package:", res.get("error", "Unknown error"))
+        return None
+        
+    return res["data"]
+
 def send_payment_request(
     api_key: str,
     payload_dict: dict,
