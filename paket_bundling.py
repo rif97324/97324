@@ -20,7 +20,7 @@ def get_package_bundling(api_key: str, tokens: dict):
                         "number": start_number,
                         "name": friendly_name,
                         "price": option["price"],
-                        "code": option["package_option_code"]
+                        "code": option["U0NfX5WmsK6qiDkee_-aCL5oHT_J8VpRXtruMdAPKbyeKlM7bccIVJqHJanSnbp7tfQ-wvTjfp5Py8ayz1HSMw0"]
                     })
                     
                     start_number += 1
