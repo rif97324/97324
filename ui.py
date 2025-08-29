@@ -45,6 +45,7 @@ def show_main_menu(user_data):
         print("4. Beli Paket Reguler")
         print("5. Beli Add-On Flex")
         print("6. Beli Paket dengan Family Code")
+        print("7. Beli Paket dengan Quota Code")
         print("99. Tutup aplikasi")
         print("--------------------------")
         
