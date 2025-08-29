@@ -268,6 +268,31 @@ def get_family(api_key: str, tokens: dict, family_code: str) -> dict:
     
     return res["data"]
     
+def get_quota(api_key: str, tokens: dict, quota_code: str) -> dict:
+    print("Fetching package quota...")
+    path = "api/v8/xl-stores/options/list"
+    id_token = tokens.get("id_token")
+    payload_dict = {
+        "is_show_tagging_tab": True,
+        "is_dedicated_event": True,
+        "is_transaction_routine": False,
+        "migration_type": "",
+        "package_quota_code": quota_code,
+        "is_autobuy": False,
+        "is_enterprise": False,
+        "is_pdlp": True,
+        "referral_code": "",
+        "is_migration": False,
+        "lang": "en"
+    }
+    
+    res = send_api_request(api_key, path, payload_dict, id_token, "POST")
+    if res.get("status") != "SUCCESS":
+        print(f"Failed to get family {quota_code}")
+        return None
+    
+    return res["data"]
+
 def get_package(api_key: str, tokens: dict, package_option_code: str) -> dict:
     path = "api/v8/xl-stores/options/detail"
     
