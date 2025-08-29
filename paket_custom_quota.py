@@ -5,9 +5,9 @@ from ui import clear_screen, show_package_details
 def get_packages_by_quota(api_key: str, tokens: dict, quota_code: str):
     packages = []
     
-    data = get_quota(api_key, tokens, quota_code)
+    data = get_family(api_key, tokens, family_code)
     if not data:
-        print("Failed to load quota data.")
+        print("Failed to load family data.")
         return None
     
     
@@ -18,8 +18,8 @@ def get_packages_by_quota(api_key: str, tokens: dict, quota_code: str):
         print("Paket Tersedia")
         print("--------------------------")
         
-        family_name = data['package_quota']["name"]
-        print(f"Quota Name: {quota_name}")
+        family_name = data['package_family']["name"]
+        print(f"Family Name: {family_name}")
         
         package_variants = data["package_variants"]
         
